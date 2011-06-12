@@ -1,2 +1,4 @@
 .rvmrc
 .sass-cache
+build
+deploy

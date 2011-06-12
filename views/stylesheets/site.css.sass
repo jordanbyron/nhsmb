@@ -1,35 +1,59 @@
 @import "compass"
 @import "blueprint"
+@import "partials/fonts"
 
-$nhs_red: #5E242E //#63242C
+$nhs_red: #672330 //#5E242E //#63242C
 $nhs_silver: #888982
 
 $font-color:         $nhs_red //#2a2a2a
 $link-color:         $nhs_red
-$link-hover-color:   #63242C
+$link-hover-color:   #AF404F
 $link-focus-color:   $link-color
 $link-active-color:  $link-color
 $link-visited-color: $link-color
 
-$blueprint-font-family:  'Baskerville', serif
-$blueprint-font-size:    13px
+$blueprint-font-family:  'DayRoman', 'Baskerville', serif
+$blueprint-font-size:    16px
 $blueprint-grid-columns: 12
 $blueprint-grid-width:   60px
 $blueprint-grid-margin:  20px
-
-
 
 +global-reset
 
 +blueprint-typography
 
-h1, h2
+h1
   color: $font-color
+  div.secondary
+    margin-top: 0.4em
+    font-size: 0.7em
+    color: #444
 
 a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
 
+body
+  background-color: #eee
+  color: #333
+
+html, body
+  height: 100%
+
 #main
-  padding: 50px
+  min-height: 100%
   text-align: center
   +container
+  background-color: #fff
+  +single-box-shadow(#222, 0, 0, 20px)
+  border-right: 20px solid $nhs_red
+  border-left: 20px solid $nhs_red
+
+#content
+  padding: 50px
+
+img.logo
+  margin: 25px 0
+
+#coming_soon
+  margin-top: 0.5em
+  font-size: 1.5em
