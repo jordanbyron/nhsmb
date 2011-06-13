@@ -1,0 +1,48 @@
+body
+  background-color: #eee
+  color: #333
+  text-rendering: optimizeLegibility
+
+html, body
+  height: 100%
+
+#main
+  min-height: 100%
+  text-align: center
+  +container
+  background-color: #fff
+  +single-box-shadow(#222, 0, 0, 20px)
+  border-right: 20px solid $nhs_red
+  border-left: 20px solid $nhs_red
+
+#content
+  padding: 50px
+  border-top: 1px solid #aaa
+
+#nav
+  padding: 0.5em 1em
+  color: #333
+  +background-image(linear-gradient(#fff, #eee))
+  text-align: left
+  border-bottom: 3px solid #eee
+  img.logo
+    float: left
+    margin-right: 1.5em
+  ul
+    list-style: none outside none
+    margin: 0
+    padding: 0
+    margin-top: 2px
+    li
+      display: inline
+      list-style-image: none
+      list-style-type: none
+      margin-right: 1em
+      white-space: nowrap
+
+      a
+        display: inline-block
+        font-size: 1.25em
+        text-decoration: none
+        &.current
+          border-bottom: 2px solid $nhs_red

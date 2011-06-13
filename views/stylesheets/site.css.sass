@@ -1,6 +1,5 @@
 @import "compass"
 @import "blueprint"
-@import "partials/fonts"
 
 $nhs_red: #672330 //#5E242E //#63242C
 $nhs_silver: #888982
@@ -22,39 +21,18 @@ $blueprint-grid-margin:  20px
 
 +blueprint-typography
 
+@import "partials/fonts"
+@import "partials/layout"
+
+a
+  +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
+
+// Temporary
+
+
 h1
   color: $font-color
   div.secondary
     margin-top: 0.4em
     font-size: 0.7em
     color: #444
-
-a
-  +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
-
-body
-  background-color: #eee
-  color: #333
-  text-rendering: optimizeLegibility
-
-html, body
-  height: 100%
-
-#main
-  min-height: 100%
-  text-align: center
-  +container
-  background-color: #fff
-  +single-box-shadow(#222, 0, 0, 20px)
-  border-right: 20px solid $nhs_red
-  border-left: 20px solid $nhs_red
-
-#content
-  padding: 50px
-
-img.logo
-  margin: 25px 0
-
-#coming_soon
-  margin-top: 0.5em
-  font-size: 1.5em
