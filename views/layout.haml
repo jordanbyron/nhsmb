@@ -7,9 +7,12 @@
     %meta{ :content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible" }
     %link{:rel => "apple-touch-icon", :href => "/apple-touch-icon.png"}
 
-    = stylesheet_link_tag "site.css"
+    %title
+      - unless yield_content(:title).blank?
+        = yield_content(:title) + " - "
+      Naugatuck High School Marching Band
 
-    = yield_content :head
+    = stylesheet_link_tag "site.css"
 
   %body
     #main
