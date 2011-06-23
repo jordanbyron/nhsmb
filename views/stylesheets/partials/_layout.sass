@@ -1,3 +1,6 @@
+html
+  overflow-y: scroll
+
 body
   background-color: #eee
   color: #333
@@ -14,9 +17,15 @@ body
 #content
   margin: 1em
 
-#footer
+#footer_image
   display: block
   margin: 0 auto
+
+#footer
+  text-align: center
+  padding: 1em
+  font-size: 0.8em
+  color: #333
 
 #nav
   margin: 1em 0
@@ -46,3 +55,12 @@ body
         text-decoration: none
         &.current
           border-bottom: 2px solid $nhs_red
+
+::-moz-selection
+  background: $link-hover-color
+  color: #fff
+  text-shadow: none
+::selection
+  background: $link-hover-color
+  color: #fff
+  text-shadow: none
