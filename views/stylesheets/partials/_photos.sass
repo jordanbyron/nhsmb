@@ -1,0 +1,45 @@
+.csstransitions #photos img.photo
+  opacity: 0
+  +transition(opacity, 1s, ease-in-out)
+  &.top
+    opacity: 1
+
+#photos
+  +box-shadow(#333, 0, 0, 5px)
+  height: 467px
+  width: 700px
+  margin: 3em auto
+  position: relative
+
+  img.photo
+    position: absolute
+    top: 0
+    left: 0
+
+  &:hover .controls .control
+    opacity: 0.75
+
+  .controls
+    position: absolute
+    width: 700px
+    bottom: 0px
+    z-index: 5
+    background: transparent
+    .control
+      vertical-align: middle
+      display: inline-block
+      +transition(opacity, 0.25s, ease-in-out)
+      opacity: 0
+      cursor: pointer
+      margin: 1em auto
+      &:hover
+        opacity: 1
+    #play-pause
+      width: 35px
+      height: 34px
+      background: transparent url('/images/controls/play-pause.png') no-repeat top left
+      &.play
+        background-position: 0px -34px
+        opacity: 1
+    #next, #previous
+      margin: auto 20px

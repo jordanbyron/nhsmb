@@ -14,6 +14,10 @@
       Naugatuck High School Marching Band
 
     = stylesheet_link_tag "site.css"
+    = javascript_include_tag "jquery-1.5.1.min.js", "jb.js",
+      "modernizr.custom.js"
+
+    = yield_content(:head)
 
   %body
     #main
