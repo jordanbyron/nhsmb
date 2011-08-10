@@ -1,8 +1,20 @@
 #downloads
+  #nav
+    a
+      color: #444
+      font-size: 1.1em
+      &:hover
+        color: #222
+
   .section
     font-size: 2em
     color: #444
     margin: 0.5em 0
+  .columns
+    .left
+      +column(6)
+    .right
+      +column(6, true)
   .list
     a
       display: block
