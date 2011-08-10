@@ -3,7 +3,7 @@
     $(function() { JB.Slideshow.init(); });
 
 #photos
-  - 8.times do |n|
+  - 7.times do |n|
     %img.photo{:src=>"/images/photos/#{n + 1}.jpg", :class => ('top' if n == 0)}
   .controls
     %img#previous.control{:src=>"/images/controls/previous.png"}
