@@ -1,3 +1,12 @@
+- content_for :head do
+  :javascript
+    $(function(){
+      $('a.sub').click(function(e){
+        $(this).next().toggle('slide');
+        e.preventDefault();
+      });
+    });
+
 #downloads
   #nav
     %ul
@@ -29,7 +38,22 @@
         = link_to "Altos / Horns", "/downloads/audio/parts/opener/horns.mp3", :target => "_blank"
         = link_to "Trumpets", "/downloads/audio/parts/opener/trumpets.mp3", :target => "_blank"
         = link_to "Low Brass", "/downloads/audio/parts/opener/lowbrass.mp3", :target => "_blank"
-        = link_to "Pit", "/downloads/audio/parts/opener/pit.mp3", :target => "_blank"
+        = link_to "Pit", '#', :class => "sub"
+        .sub{:style => "display: none;"}
+          = link_to "Full Pit", "/downloads/audio/parts/opener/pit/full.mp3", :target => "_blank"
+          = link_to "Bells", "/downloads/audio/parts/opener/pit/bells.mp3", :target => "_blank"
+          = link_to "Xylo", "/downloads/audio/parts/opener/pit/xylo.mp3", :target => "_blank"
+          = link_to "Vibes", "/downloads/audio/parts/opener/pit/vibe.mp3", :target => "_blank"
+          = link_to "Marimba", "/downloads/audio/parts/opener/pit/marimba.mp3", :target => "_blank"
+          = link_to "Aux 1", "/downloads/audio/parts/opener/pit/aux1.mp3", :target => "_blank"
+          = link_to "Aux 2", "/downloads/audio/parts/opener/pit/aux2.mp3", :target => "_blank"
+        = link_to "Battery", :class => "sub"
+        .sub{:style => "display: none;"}
+          = link_to "Full Battery", "/downloads/audio/parts/opener/battery/full.mp3", :target => "_blank"
+          = link_to "Snares", "/downloads/audio/parts/opener/battery/snare.mp3", :target => "_blank"
+          = link_to "Quints", "/downloads/audio/parts/opener/battery/quint.mp3", :target => "_blank"
+          = link_to "Basses", "/downloads/audio/parts/opener/battery/bass.mp3", :target => "_blank"
+
     .right
       %h3 Ballad
       .list
@@ -37,7 +61,13 @@
         = link_to "Altos / Horns", "/downloads/audio/parts/ballad/horns.mp3", :target => "_blank"
         = link_to "Trumpets", "/downloads/audio/parts/ballad/trumpets.mp3", :target => "_blank"
         = link_to "Low Brass", "/downloads/audio/parts/ballad/lowbrass.mp3", :target => "_blank"
-        = link_to "Pit", "/downloads/audio/parts/ballad/pit.mp3", :target => "_blank"
+        = link_to "Pit", '#', :class => "sub"
+        .sub{:style => "display: none;"}
+          = link_to "Full Pit", "/downloads/audio/parts/ballad/pit.mp3", :target => "_blank"
+        = link_to "Battery", :class => "sub"
+        .sub{:style => "display: none;"}
+          %i Coming Soon ...
+          /= link_to "TODO", "#TODO", :target => "_blank"
 
   #warmups.section Warmups / Scales
 
