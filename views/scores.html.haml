@@ -1,0 +1,6 @@
+#events
+  - events.each do |event|
+    .event
+      .name= link_to event.name, event.url, :target => "_blank"
+      /.date= event.date
+      .score= event.score

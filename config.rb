@@ -1,3 +1,5 @@
+require './lib/mac'
+
 # CodeRay syntax highlighting in Haml
 # activate :code_ray
 
@@ -16,9 +18,7 @@
 
 # Helpers
 helpers do
-  def some_helper(*args)
-    "Helping"
-  end
+  include Mac
 end
 
 # Change the CSS directory
