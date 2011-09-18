@@ -14,8 +14,9 @@ set :deploy_via, :remote_cache
 server "jordanbyron.com", :app, :web, :db, :primary => true
 
 after 'deploy:update_code' do
-  run 'bundle install'
-  run 'mm-build'
-  run "ln -nfs #{shared_path}/downloads/audio #{release_path}/downloads/audio"
-  run "ln -nfs #{shared_path}/downloads/documents #{release_path}/downloads/documents"
+  run "cd #{release_path}; mm-build"
+  run "ln -nfs #{shared_path}/downloads/audio #{release_path}/build/downloads/"
+  run "ln -nfs #{shared_path}/downloads/documents #{release_path}/build/downloads/"
+  run_locally "rsync -ruv public/downloads/documents/* jordanbyron@jordanbyron.com:#{shared_path}/downloads/documents/"
+  run_locally "rsync -ruv public/downloads/audio/* jordanbyron@jordanbyron.com:#{shared_path}/downloads/audio/"
 end
