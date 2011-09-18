@@ -20,5 +20,5 @@ set :output, "/home/jordanbyron/nhsmb/logs/cron_log.log"
 # Learn more: http://github.com/javan/whenever
 
 every 1.day do
-  command 'cdmm-build'
+  command 'cd /home/jordanbyron/nhsmb/current; mm-build'
 end
