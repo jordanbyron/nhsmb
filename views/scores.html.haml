@@ -1,5 +1,6 @@
 #events
-  %h1 Fall 2011
+  %h1= link_to "Fall 2011", "/downloads/documents/fall_2011_bio.pdf",
+    :target => "_blank"
   - events.each do |event|
     .event
       .name= link_to event.name, event.url, :target => "_blank"
