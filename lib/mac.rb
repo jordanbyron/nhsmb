@@ -14,6 +14,8 @@ module Mac
       url      = "http://musicalartsconference.com#{name_row.first.attributes["href"].value}"
       tds = row.search("td").map {|td| td.inner_html }
 
+      next if name[/Naugatuck/] # Skip Naugatuck since we were in Exhibition
+
       events << event.new(name, url, tds[1], tds[2])
     end
 
