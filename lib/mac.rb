@@ -4,7 +4,7 @@ require 'mechanize'
 module Mac
 
   def events
-    event  = Struct.new(:name, :url, :date, :score)
+    Event  = Struct.new(:name, :url, :date, :score)
     events = []
     agent = Mechanize.new
     page  = agent.get('http://musicalartsconference.com/members/Marching-Band/Naugatuck-High-School.html')
@@ -16,8 +16,8 @@ module Mac
 
       next if name[/Naugatuck/i] # Skip Naugatuck since we were in Exhibition
 
-      event = event.new(name, url, tds[1], tds[2])
-      event.score = 73.1 if name[/Trumbull/i]
+      event = Event.new(name, url, tds[1], tds[2])
+      event.score = "73.1" if name[/Trumbull/i]
 
       events << event
     end
