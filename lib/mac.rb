@@ -3,8 +3,9 @@ require 'mechanize'
 
 module Mac
 
+  Event = Struct.new(:name, :url, :date, :score)
+
   def events
-    Event  = Struct.new(:name, :url, :date, :score)
     events = []
     agent = Mechanize.new
     page  = agent.get('http://musicalartsconference.com/members/Marching-Band/Naugatuck-High-School.html')
