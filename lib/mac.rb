@@ -14,9 +14,12 @@ module Mac
       url      = "http://musicalartsconference.com#{name_row.first.attributes["href"].value}"
       tds = row.search("td").map {|td| td.inner_html }
 
-      next if name[/Naugatuck/] # Skip Naugatuck since we were in Exhibition
+      next if name[/Naugatuck/i] # Skip Naugatuck since we were in Exhibition
 
-      events << event.new(name, url, tds[1], tds[2])
+      event = event.new(name, url, tds[1], tds[2])
+      event.score = 73.1 if name[/Trumbull/i]
+
+      events << event
     end
 
     events
