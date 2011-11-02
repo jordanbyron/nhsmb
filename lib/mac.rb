@@ -18,7 +18,8 @@ module Mac
       next if name[/Naugatuck/i] # Skip Naugatuck since we were in Exhibition
 
       event = Event.new(name, url, tds[1], tds[2])
-      event.score = "73.10" if name[/Trumbull/i]
+      event.score = "73.10"    if name[/Trumbull/i]
+      event.score = "Canceled" if name [/Law/i]
 
       events << event
     end
