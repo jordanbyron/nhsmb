@@ -3,6 +3,9 @@
     :target => "_blank"
   - events.each do |event|
     .event
-      .name= link_to event.name, event.url, :target => "_blank"
-      /.date= event.date
+      .name
+        - if event.url
+          = link_to event.name, event.url, :target => "_blank"
+        - else
+          = event.name
       .score= event.score
