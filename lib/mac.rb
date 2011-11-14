@@ -15,7 +15,7 @@ module Mac
       Event.new("Norwalk High School",      nil, nil, "84.20"),
       Event.new("MAC Championships",
         "http://musicalartsconference.com/events/11122011/MAC-Championships.html",
-        nil, 88.00 )
+        nil, "88.00")
     ]
     # agent = Mechanize.new
     #     page  = agent.get('http://musicalartsconference.com/members/Marching-Band/Naugatuck-High-School.html')
