@@ -20,3 +20,5 @@ after 'deploy:update_code' do
   run_locally "rsync -ruv public/downloads/documents/* jordanbyron@jordanbyron.com:#{shared_path}/downloads/documents/"
   run_locally "rsync -ruv public/downloads/audio/* jordanbyron@jordanbyron.com:#{shared_path}/downloads/audio/"
 end
+
+after "deploy", "deploy:cleanup"
