@@ -3,7 +3,7 @@
     $(function() { JB.Slideshow.init(); });
 
 #photos
-  - 7.times do |n|
+  - 8.times do |n|
     %img.photo{:src=>"/images/photos/#{n + 1}.jpg", :class => ('top' if n == 0)}
   .controls
     %img#previous.control{:src=>"/images/controls/previous.png"}
@@ -11,8 +11,13 @@
     %img#next.control{:src=>"/images/controls/next.png"}
 
 %h2.tup
-  Talent
   %span.bull &bull;
-  Unity
+  2011 MAC Class III Champions
   %span.bull &bull;
-  Pride
+
+/ %h2.tup
+/   Talent
+/   %span.bull &bull;
+/   Unity
+/   %span.bull &bull;
+/   Pride
