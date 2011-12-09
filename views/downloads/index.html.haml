@@ -8,12 +8,12 @@
     });
 
 #downloads
-  #nav
+  #nav{:style => "display: none;"}
     %ul
       %li= link_to "Documents", "#documents"
       %li= link_to "Audio", "#audio"
       %li= link_to "Individual Parts", "#parts"
-      %li= link_to " Warmups / Scales / Tempos", "#warmups"
+      %li= link_to " Warmups / Scales", "#warmups"
 
   #documents.section Documents
 
@@ -27,68 +27,9 @@
   #audio.section Audio
 
   .list
-    = link_to "Opener", "/downloads/audio/NationsOpen.mp3", :target => "_blank"
-    = link_to "Ballad", "/downloads/audio/WeGoOn.mp3", :target => "_blank"
-    = link_to "Closer", "/downloads/audio/EarthClose.mp3", :target => "_blank"
+    = link_to "On Winter's Eve", "/downloads/audio/OnWintersEve.mp3", :target => "_blank"
 
-  #parts.section Individual Parts
-  .columns
-    .left
-      %h3 Opener
-      .list
-        = link_to "Wood Winds", "/downloads/audio/parts/opener/ww.mp3", :target => "_blank"
-        = link_to "Altos / Horns", "/downloads/audio/parts/opener/horns.mp3", :target => "_blank"
-        = link_to "Trumpets", "/downloads/audio/parts/opener/trumpets.mp3", :target => "_blank"
-        = link_to "Low Brass", "/downloads/audio/parts/opener/lowbrass.mp3", :target => "_blank"
-        = link_to "Pit", '#', :class => "sub"
-        .sub{:style => "display: none;"}
-          = link_to "Full Pit", "/downloads/audio/parts/opener/pit/full.mp3", :target => "_blank"
-          = link_to "Bells", "/downloads/audio/parts/opener/pit/bells.mp3", :target => "_blank"
-          = link_to "Xylo", "/downloads/audio/parts/opener/pit/xylo.mp3", :target => "_blank"
-          = link_to "Vibes", "/downloads/audio/parts/opener/pit/vibe.mp3", :target => "_blank"
-          = link_to "Marimba", "/downloads/audio/parts/opener/pit/marimba.mp3", :target => "_blank"
-          = link_to "Aux 1", "/downloads/audio/parts/opener/pit/aux1.mp3", :target => "_blank"
-          = link_to "Aux 2", "/downloads/audio/parts/opener/pit/aux2.mp3", :target => "_blank"
-        = link_to "Battery", :class => "sub"
-        .sub{:style => "display: none;"}
-          = link_to "Full Battery", "/downloads/audio/parts/opener/battery/full.mp3", :target => "_blank"
-          = link_to "Snares", "/downloads/audio/parts/opener/battery/snare.mp3", :target => "_blank"
-          = link_to "Quints", "/downloads/audio/parts/opener/battery/quint.mp3", :target => "_blank"
-          = link_to "Basses", "/downloads/audio/parts/opener/battery/bass.mp3", :target => "_blank"
-
-    .center
-      %h3 Ballad
-      .list
-        = link_to "Wood Winds", "/downloads/audio/parts/ballad/ww.mp3", :target => "_blank"
-        = link_to "Altos / Horns", "/downloads/audio/parts/ballad/horns.mp3", :target => "_blank"
-        = link_to "Trumpets", "/downloads/audio/parts/ballad/trumpets.mp3", :target => "_blank"
-        = link_to "Low Brass", "/downloads/audio/parts/ballad/lowbrass.mp3", :target => "_blank"
-        = link_to "Pit", "/downloads/audio/parts/ballad/pit.mp3", :target => "_blank"
-
-    .right
-      %h3 Closer
-
-  #warmups.section Warmups / Scales / Tempos
+  #warmups.section Warmups
 
   .list
     = link_to "# 3 - Chromatic", "/downloads/audio/warmups/3.mp3", :target => "_blank"
-
-  .columns
-    .left
-      %h3 Opener
-      .list
-        = link_to "1-49: 158", tempo(158), :target => "_blank"
-        = link_to "50-End: 164", tempo(164), :target => "_blank"
-    .center
-      %h3 Ballad
-      .list
-        = link_to "1-13: 88", tempo(88), :target => "_blank"
-        = link_to "14-38: 96", tempo(96), :target => "_blank"
-        = link_to "39-Rit: 136", tempo(136), :target => "_blank"
-        = link_to "Rit-End: 148", tempo(148), :target => "_blank"
-    .right
-      %h3 Closer
-      .list
-        = link_to "1-10: 96", tempo(96), :target => "_blank"
-        = link_to "11-48: 110", tempo(110), :target => "_blank"
-        = link_to "49-End: 172", tempo(172), :target => "_blank"
