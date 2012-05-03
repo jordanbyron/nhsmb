@@ -21,6 +21,9 @@ JB.Slideshow.init = function(){
   if(!Modernizr.csstransitions){
     $('#photos img.photo:not(.top)').css('display', 'none');
   }
+  else {
+    $('#photos img.photo').css('display', 'block');
+  }
 
   JB.Slideshow.start();
 }
