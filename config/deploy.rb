@@ -19,6 +19,7 @@ after 'deploy:update_code' do
   run "cd #{release_path}; mm-build"
   run "ln -nfs #{shared_path}/downloads/audio #{release_path}/build/downloads/"
   run "ln -nfs #{shared_path}/downloads/documents #{release_path}/build/downloads/"
+  run "cp #{shared_path}/scores.html #{release_path}/build/scores.html"
   run_locally "rsync -ruv public/downloads/documents/* jordanbyron@jordanbyron.com:#{remote_path}/downloads/documents/"
   run_locally "rsync -ruv public/downloads/audio/* jordanbyron@jordanbyron.com:#{remote_path}/downloads/audio/"
 end
