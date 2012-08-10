@@ -12,7 +12,7 @@ module Mac
 
     page.search("div[@class='about_page'] table tr")[1..-1].each do |row|
       name_row = row.search("td a")
-      next unless name_row
+      next unless name_row.nil?
       name     = name_row.inner_html
       url      = "http://musicalartsconference.com#{name_row.first.attributes["href"].value}"
       tds = row.search("td").map {|td| td.inner_html }
