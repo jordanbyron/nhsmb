@@ -1,11 +1,12 @@
 #events
   %h1 Fall 2012
-  - # TODO Enable for fall season
-  - [].each do |event| # events.each do |event|
+  - if events.empty?
+    %h2 Coming soon ...
+  - events.each do |event|
     .event
       .name
         - if event.url
-          = link_to event.name, event.url, :target => "_blank"
+          = link_to event.name, event.url
         - else
           = event.name
       .score= event.score
