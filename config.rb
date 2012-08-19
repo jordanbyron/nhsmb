@@ -18,7 +18,7 @@ require './lib/mac'
 
 # Helpers
 helpers do
-  include Mac
+  include Scores
 
   def tempo(bpm)
     "http://webmetronome.com/?t=#{bpm}&b=1&a=1000"
