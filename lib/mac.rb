@@ -39,7 +39,7 @@ module Scores
   #
   def us_bands_events
     event = Event.new("Bunnell High School",
-      "http://trigonroad.com/yea/eventInfo.cfm?id=439",
+      "http://trigonroad.com/yea/schedule.cfm",
       "10-27-12",
       nil)
 
