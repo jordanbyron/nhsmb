@@ -41,7 +41,7 @@ module Scores
     event = Event.new("Bunnell High School",
       "http://trigonroad.com/yea/eventInfo.cfm?id=439",
       "10-27-12",
-      86)
+      "86.00")
 
     [event]
   end
