@@ -28,6 +28,13 @@ module Scores
 
       event = Event.new(name, url, tds[1], tds[2])
 
+      case event.name
+      when "Jonathan Law High School"
+        event.score = "89.20"
+      when "Norwalk High School"
+        event.score = "Canceled"
+      end
+
       events << event
     end
 
