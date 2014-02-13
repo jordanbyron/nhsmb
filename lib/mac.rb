@@ -17,7 +17,9 @@ module Scores
   def mac_events
     events = []
     agent = Mechanize.new
-    page  = agent.get('http://musicalartsconference.com/members/Marching-Band/Naugatuck-High-School.html')
+    # Marching Band
+    # http://musicalartsconference.com/members/Marching-Band/Naugatuck-High-School.html
+    page  = agent.get('http://musicalartsconference.com/members/Guard/Greyhound-Winter-Guard.html')
 
     page.search("div[@class='about_page'] table tr")[1..-1].each do |row|
       name_row = row.search("td a")
