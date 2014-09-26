@@ -23,7 +23,8 @@
     #main
       #nav= partial 'nav'
       #content= yield
-    = image_tag "footer.png", :id => "footer_image"
+    %footer
+      = link_to image_tag("nhs.png"), "/"
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-25977853-1']);

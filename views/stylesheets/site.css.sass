@@ -30,19 +30,24 @@ $blueprint-grid-margin:  10px
 @import "partials/events"
 @import "partials/alumni"
 @import "partials/parents"
+@import "partials/thunder"
 
 a
   +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
 
-// Temporary
-
-
-h1
+h1#site-header
   color: $font-color
   div.secondary
     margin-top: 0.4em
     font-size: 0.7em
     color: #444
+  a
+    transition: color 0.5s ease
+    text-decoration: none
+    &:hover
+      color: #AF0018
+      div.secondary
+        color: #666
 
 img.landing
   +single-box-shadow(#333, 0, 0, 10px)
