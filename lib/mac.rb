@@ -7,7 +7,7 @@ module Scores
 
   def events
     events = mac_events
-    events += us_bands_events
+    # events += us_bands_events
 
     events.sort_by(&:date)
   end
@@ -21,7 +21,8 @@ module Scores
     # http://musicalartsconference.com/members/Marching-Band/Naugatuck-High-School.html
     # Color Guard
     # http://musicalartsconference.com/members/Guard/Greyhound-Winter-Guard.html
-    page  = agent.get('http://musicalartsconference.com/members/Marching-Band/Naugatuck-High-School.html')
+    # http://musicalartsconference.com/members/Guard/Naugatuck-Winter-Guard.html
+    page  = agent.get('http://musicalartsconference.com/members/Guard/Naugatuck-Winter-Guard.html')
 
     page.search("div[@class='about_page'] table tr")[1..-1].each do |row|
       name_row = row.search("td a")
