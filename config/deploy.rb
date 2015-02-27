@@ -11,6 +11,12 @@ set :use_sudo, false
 
 set :deploy_via, :remote_cache
 
+if match = `git branch`.match(/\* (?<branch>\S+)\s/m)
+  set :branch, match[:branch]
+else
+  set :branch, "master"
+end
+
 server "jordanbyron.com", :app, :web, :db, :primary => true
 
 after 'deploy:update_code' do
