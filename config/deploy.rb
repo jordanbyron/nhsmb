@@ -23,6 +23,7 @@ after 'deploy:update_code' do
   remote_path = shared_path[2..-1]
 
   run "cd #{release_path}; mm-build"
+  run "cd #{release_path}/build; mkdir downloads"
 
   %w{audio documents sheet_music drill}.each do |folder|
     run "ln -nfs #{shared_path}/downloads/#{folder} #{release_path}/build/downloads/"
