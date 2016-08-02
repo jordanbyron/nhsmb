@@ -1,7 +1,7 @@
 require "whenever/capistrano"
 
 set :application, "nhsmb"
-set :repository,  "git@github.com:jordanbyron/nhsmb.git"
+set :repository,  "https://github.com/jordanbyron/nhsmb.git"
 
 set :scm, :git
 set :deploy_to, "~/#{application}"
