@@ -5,6 +5,8 @@ gem 'mechanize', '~> 2.0'
 gem 'whenever'
 gem 'compass', '~> 0.11.1'
 gem 'pry'
+gem 'eventmachine', '1.0.9.1'
+gem 'nokogiri', '1.6.1'
 
 gem 'capistrano',       :require => false
 gem 'railsless-deploy', :require => false
