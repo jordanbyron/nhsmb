@@ -3,3 +3,4 @@
 build
 deploy
 public/downloads/*
+log

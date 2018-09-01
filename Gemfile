@@ -9,4 +9,6 @@ gem 'eventmachine', '1.0.9.1'
 gem 'nokogiri', '1.6.1'
 
 gem 'capistrano',       :require => false
+gem 'capistrano-bundler', :require => false
+gem 'capistrano-rvm', :require => false
 gem 'railsless-deploy', :require => false
