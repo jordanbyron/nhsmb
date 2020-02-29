@@ -94,7 +94,7 @@ GEM
     rack-test (0.5.7)
       rack (>= 1.0)
     railsless-deploy (1.0.2)
-    rake (12.3.1)
+    rake (13.0.1)
     sass (3.1.21)
     shotgun (0.8)
       rack (>= 1.0)
