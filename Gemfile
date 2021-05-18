@@ -6,7 +6,7 @@ gem 'whenever'
 gem 'compass', '~> 0.11.1'
 gem 'pry'
 gem 'eventmachine', '1.0.9.1'
-gem 'nokogiri', '1.6.1'
+gem 'nokogiri', '1.11.4'
 
 gem 'capistrano',       :require => false
 gem 'capistrano-bundler', :require => false
